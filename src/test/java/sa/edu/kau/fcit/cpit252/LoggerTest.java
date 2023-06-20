@@ -8,10 +8,8 @@ import static org.junit.Assert.assertEquals;
 public class LoggerTest {
 
     @Test
-    public void shouldBeIdenticals()
-    {
-        Logger log1 = new Logger();
-        Logger log2 = new Logger();
-        assertEquals(log1, log2);
-    }
-}
+    public void shouldBeIdenticals() {
+        Logger log1 = Logger.getLoggerInstance();
+        Logger log2 = Logger.getLoggerInstance();
+        assertEquals(log1,log2);
+    }}
