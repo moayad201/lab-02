@@ -36,4 +36,5 @@ public class Shipment {
         return "Shipment info:\nTracking number: " + this.trackingNumber +
                 "\nName" + this.name + "\nAddress: " + this.address +
                 "\nPhone: " + this.phoneNumber;
-    }}
+    }
+}

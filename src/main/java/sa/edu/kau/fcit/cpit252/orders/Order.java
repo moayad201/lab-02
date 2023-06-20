@@ -14,7 +14,12 @@ public class Order {
         return ran.nextInt(Integer.MAX_VALUE);
     }
     public Order(){
-
+        // Emulate slow initialization.
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException ex) {
+            ex.printStackTrace();
+        }
         try {
             Thread.sleep(2000);
         } catch (InterruptedException ex) {
@@ -26,7 +31,7 @@ public class Order {
         log.info(this.toString());
     }
     public String toString(){
-        String s = "Order info:\nOrder number: " + this.orderNumber +
+        return "Order info:\nOrder number: " + this.orderNumber +
                 "\nDate" + this.orderDate;
-        return s;
-    }}
+    }
+}

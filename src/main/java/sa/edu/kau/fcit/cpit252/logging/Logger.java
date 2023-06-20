@@ -13,6 +13,7 @@ public class Logger {
     private PrintWriter writer;
 
     private static Logger loggerInstance;
+
     private Logger() {
         try {
             FileWriter fw = new FileWriter(logFile);
@@ -23,17 +24,18 @@ public class Logger {
         }
     }
 
-    public static Logger getLoggerInstance(){
-        if(loggerInstance == null){
-            loggerInstance = new Logger();
+    public static Logger getLoggerInstance() {
+        if (loggerInstance==null){
+            loggerInstance=new Logger();
+
         }
         return loggerInstance;
     }
-
 
     public void info (String message) {
         writer.println("INFO: " + message);
     }
     public void error (String message) {
         writer.println("Error: " + message);
-    }}
+    }
+}
