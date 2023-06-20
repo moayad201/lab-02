@@ -35,4 +35,4 @@ public class Logger {
     }
     public void error (String message) {
         writer.println("Error: " + message);
-}}
+    }}
