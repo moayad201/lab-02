@@ -30,6 +30,7 @@ public class Logger {
         return loggerInstance;
     }
 
+
     public void info (String message) {
         writer.println("INFO: " + message);
     }
